@@ -1,12 +1,11 @@
 require("dotenv").config();
-
 var axios = require("axios");
-
 var keys = require("./key.js");
 console.log(keys);
 var moment = require("moment");
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
+var fs = require("fs");
 
 
 
@@ -37,6 +36,7 @@ switch (command) {
         break;
 
     case "do-what-it-says":
+        readRandom();
         console.log("do what it says is executed");
         break;
 
@@ -78,10 +78,10 @@ function spotifySong() {
         type: 'track',
         query: query,
     }, function (err, data) {
-       console.log("Artist: " + data.tracks.items[0].album.artists[0].name);
-       console.log("Song Name: " + data.tracks.items[0].name);
-       console.log("Song Preview: " + data.tracks.items[0].external_urls.spotify);
-       console.log("Album: " + data.tracks.items[0].album.name);
+        console.log("Artist: " + data.tracks.items[0].album.artists[0].name);
+        console.log("Song Name: " + data.tracks.items[0].name);
+        console.log("Song Preview: " + data.tracks.items[0].external_urls.spotify);
+        console.log("Album: " + data.tracks.items[0].album.name);
         if (err) {
             return console.log('Error occurred: ' + err);
         }
@@ -120,6 +120,20 @@ function omdb() {
 };
 
 // do-what-it-says
-// read random text
-
-// fs.require("fs");
+// function randomtxt() {
+//     fs.readFile('random.txt', "utf8", function(error, data) {
+//         if (error) {
+//             return console.log(error);
+//         }
+//         console.log(data);
+//     });
+// };
+function readRandom() {
+    fs.readFile("random.txt", "utf8", function(error, data) {
+        if (error) {
+          return console.log(error);
+        }
+        console.log(data);
+ 
+      });
+ };
