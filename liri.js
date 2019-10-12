@@ -1,7 +1,7 @@
 require("dotenv").config();
 var axios = require("axios");
 var keys = require("./key.js");
-console.log(keys);
+// console.log(keys);
 var moment = require("moment");
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
@@ -17,7 +17,7 @@ var command = process.argv[2];
 var query = process.argv[3];
 
 console.log(command)
-console.log(query)
+// console.log(query)
 
 switch (command) {
     case "concert-this":
@@ -129,11 +129,11 @@ function omdb() {
 //     });
 // };
 function readRandom() {
-    fs.readFile("random.txt", "utf8", function(error, data) {
+    fs.readFile("random.txt", "utf8", function (error, data) {
         if (error) {
-          return console.log(error);
+            return console.log(error);
         }
         console.log(data);
- 
-      });
- };
+
+    });
+};
