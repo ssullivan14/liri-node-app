@@ -49,11 +49,11 @@ function bandsAPI() {
     axios.get("https://rest.bandsintown.com/artists/" + query + "/events?app_id=codingbootcamp").then(
             function (response) {
                 // console.log(response.data);
-                
+
                 console.log("The venue is: " + response.data[0].venue.name);
                 console.log("The location is: " + response.data[0].venue.city);
                 console.log("The date of the event is: " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
-                
+
             })
         .catch(function (error) {
             if (error.response) {
@@ -83,7 +83,7 @@ function spotifySong() {
         console.log("Artist: " + data.tracks.items[0].album.artists[0].name);
         console.log("Song Name: " + data.tracks.items[0].name);
         console.log("Song Preview: " + data.tracks.items[0].external_urls.spotify);
-        console.log("Album: " + data.tracks.items[0].album.name);   
+        console.log("Album: " + data.tracks.items[0].album.name);
         if (err) {
             return console.log('Error occurred: ' + err);
         }
@@ -94,7 +94,7 @@ function spotifySong() {
 function omdb() {
     axios.get("http://www.omdbapi.com/?t=" + query + "&apikey=trilogy").then(
             function (response) {
-                
+
                 // console.log(response.data);
                 console.log("The title of movie is: " + response.data.Title);
                 console.log("The year of the movie is: " + response.data.Year);
@@ -104,7 +104,7 @@ function omdb() {
                 console.log("The language of the movie is: " + response.data.Language);
                 console.log("The plot of movie is: " + response.data.Plot);
                 console.log("The Actors in the movie are: " + response.data.Actors);
-                
+
             })
         .catch(function (error) {
             if (error.response) {
@@ -123,15 +123,6 @@ function omdb() {
         })
 };
 
-// do-what-it-says
-// function randomtxt() {
-//     fs.readFile('random.txt', "utf8", function(error, data) {
-//         if (error) {
-//             return console.log(error);
-//         }
-//         console.log(data);
-//     });
-// };
 function readRandom() {
     fs.readFile("random.txt", "utf8", function (error, data) {
         if (error) {

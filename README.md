@@ -1,14 +1,66 @@
 # liri-node-app
 
-Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
-Give a high-level overview of how the app is organized
+The LIRI Bot was designed to produce search results based on the following commands:
+node liri.js concert-this
+node liri.js spotify-this-song
+node liri.js movie-this
+node liri.js do-what-it-says
+
+
+Each command produced different search results as listed below:
+node liri.js concert-this “artist/band name”
+Name of venue
+Venue location
+Date of the event in MM/DD/YYYY format
+node liri.js spotify-this-song “song/track name”
+Artist
+Song
+Spotify song preview url
+Album
+node liri.js movie-this “movie title”
+Title of the movie
+Year the movie came out
+IMDB Rating of the movie
+Country where the movie was produced
+Language of the movie
+Plot of the movie
+Actors in the movie
+Rotten Tomatoes Rating of the movie
+node liri.js do-what-it-says
+Print the spotify results for “I want it that way” stored in the random.txt file
+
 Give start-to-finish instructions on how to run the app
+Open liri.js in terminal and type in node liri.js node ....(type in command with input)
+
 Include screenshots, gifs or videos of the app functioning
+see issues on github
+
 Contain a link to a deployed version of the app
+https://github.com/ssullivan14/liri-node-app
+
+
 Clearly list the technologies used in the app
+npm - spotify, moment
+node
+javascript
+axios OMDB bands in town 
+txt files = fs
+
 State your role in the app development
+solo-app developer
 
 What Each Command Should Do
+Spotify command will show the following information about the song in your terminal/bash window
+
+
+Artist(s)
+The song's name
+A preview link of the song from Spotify
+The album that the song is from
+
+
+If no song is provided then your program will default to "The Sign" by Ace of Base.
+You will utilize the node-spotify-api package in order to retrieve song information from the Spotify API.
 
 node liri.js concert-this <artist/band name here>
 
@@ -21,37 +73,7 @@ Date of the Event (use moment to format this as "MM/DD/YYYY")
 
 
 
-
-
-node liri.js spotify-this-song '<song name here>'
-
-
-
-
-This will show the following information about the song in your terminal/bash window
-
-
-Artist(s)
-The song's name
-A preview link of the song from Spotify
-The album that the song is from
-
-
-If no song is provided then your program will default to "The Sign" by Ace of Base.
-You will utilize the node-spotify-api package in order to retrieve song information from the Spotify API.
-The Spotify API requires you sign up as a developer to generate the necessary credentials. You can follow these steps in order to generate a client id and client secret:
-Step One: Visit https://developer.spotify.com/my-applications/#!/
-Step Two: Either login to your existing Spotify account or create a new one (a free account is fine) and log in.
-Step Three: Once logged in, navigate to https://developer.spotify.com/my-applications/#!/applications/create to register a new application to be used with the Spotify API. You can fill in whatever you'd like for these fields. When finished, click the "complete" button.
-Step Four: On the next screen, scroll down to where you see your client id and client secret. Copy these values down somewhere, you'll need them to use the Spotify API and the node-spotify-api package.
-
-
-
-node liri.js movie-this '<movie name here>'
-
-
-
-
+node liri.js movie-this '<movie name here>' Command 
 This will output the following information to your terminal/bash window:
 
    * Title of the movie.
@@ -87,13 +109,3 @@ Using the fs Node package, LIRI will take the text inside of random.txt and then
 It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
 Edit the text in random.txt to test out the feature for movie-this and concert-this.
 
-
-
-
-
-BONUS
-
-
-In addition to logging the data to your terminal/bash window, output the data to a .txt file called log.txt.
-Make sure you append each command you run to the log.txt file. 
-Do not overwrite your file each time you run a command.
