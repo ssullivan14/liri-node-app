@@ -15,9 +15,13 @@ var fs = require("fs");
 
 var command = process.argv[2];
 var query = process.argv[3];
+var qCommand = command + " " + query;
 
 console.log(command)
 // console.log(query)
+
+//logging to log.txt
+createLog(qCommand);
 
 switch (command) {
     case "concert-this":
@@ -92,6 +96,11 @@ function spotifySong() {
 
 // movie-this OMDB
 function omdb() {
+    if (query) {
+        //user put in movie do nothing
+    } else {
+        query = "Mr Nobody";
+    }
     axios.get("http://www.omdbapi.com/?t=" + query + "&apikey=trilogy").then(
             function (response) {
 
@@ -132,3 +141,12 @@ function readRandom() {
 
     });
 };
+
+function createLog() {
+    fs.appendFile("log.txt", qCommand, function (error) {
+        if (error) {
+            return console.log(error);
+        }
+        
+    });
+}
