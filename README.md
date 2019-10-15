@@ -34,6 +34,10 @@ Open liri.js in terminal and type in node liri.js node ....(type in command with
 
 Include screenshots, gifs or videos of the app functioning
 see issues on github
+https://github.com/ssullivan14/liri-node-app/issues/4#issue-506859852
+https://github.com/ssullivan14/liri-node-app/issues/3#issue-506858969
+https://github.com/ssullivan14/liri-node-app/issues/2#issue-506858593
+https://github.com/ssullivan14/liri-node-app/issues/1#issue-506858081
 
 Contain a link to a deployed version of the app
 https://github.com/ssullivan14/liri-node-app
