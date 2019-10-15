@@ -1,13 +1,15 @@
 # liri-node-app
 
-The LIRI Bot was designed to produce search results based on the following commands:
-node liri.js concert-this
-node liri.js spotify-this-song
-node liri.js movie-this
-node liri.js do-what-it-says
+<h2>The LIRI Bot was designed to produce search results based on the following commands:</h2>
+<ul>
+<li>node liri.js concert-this</li>
+<li>node liri.js spotify-this-song</li>
+<li>node liri.js movie-this</li>
+<li>node liri.js do-what-it-says</li>
+</ul>
 
 
-Each command produced different search results as listed below:
+<h2>Each command produced different search results as listed below:</h2>
 node liri.js concert-this “artist/band name”
 Name of venue
 Venue location
@@ -93,19 +95,13 @@ If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/
 
 It's on Netflix!
 
-
-You'll use the axios package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use trilogy.
+Used the axios package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use trilogy.
 
 
 
 node liri.js do-what-it-says
-
-
-
-
 Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 
 
 It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
-Edit the text in random.txt to test out the feature for movie-this and concert-this.
 
