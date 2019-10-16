@@ -64,6 +64,8 @@
 <img src = "https://user-images.githubusercontent.com/7318006/66780824-cb53fa80-ee9f-11e9-9570-7ab843b64b4d.png">
 <img src = "https://user-images.githubusercontent.com/7318006/66780743-9e9fe300-ee9f-11e9-9411-97381a378d02.png">
 <img src = "https://user-images.githubusercontent.com/7318006/66780662-65677300-ee9f-11e9-95d6-1b010ee2dd37.png">
+<img src = "https://user-images.githubusercontent.com/7318006/66883019-7052fe00-ef9a-11e9-87ad-31b0db3d5fca.png">
+<img src = "https://user-images.githubusercontent.com/7318006/66883001-629d7880-ef9a-11e9-8aee-14b9d7b21f7f.png">
 
 
 <h2>Link to a deployed version of the app</h2>
